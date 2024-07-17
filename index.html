@@ -1,0 +1,61 @@
+
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		
+		<style>
+
+			body{
+				background-color: black;
+				
+			}
+			.row{
+				position: relative;
+				align-items: center;
+				align-content: center;
+				color: rgb(255, 51, 0);
+				font-family: monospace;
+				size: 200px;
+			}
+			.button{
+				size: 190px;
+				color: aqua;
+				position: fixed;
+				margin-top: 200px;
+				left: 650px;
+			}
+			button:hover{
+				color: chartreuse;
+			}
+
+
+		</style>
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<h1 style="text-align:center"><strong>LISTA TICKETS <br> KOROVA CLUB</strong></h1>
+				
+			</div>
+
+			<div class="button">
+				<button><a href="index.php">Ingresar</a></button>
+			</div>
+		</div>
+		
+		<script>
+			$('#confirm-delete').on('show.bs.modal', function(e) {
+				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+				
+				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+			});
+		</script>	
+		
+	</body>
+</html>	
